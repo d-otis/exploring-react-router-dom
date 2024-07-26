@@ -1,13 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import App from "./App";
 import Cat from "./components/Cat/Cat";
 import Dog from "./components/Dog/Dog";
 import Home from "./components/Home/Home";
@@ -31,6 +25,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />

@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "./logo.svg";
-import Dog from "./components/Dog/Dog";
-import Cat from "./components/Cat/Cat";
+
 import "./App.css";
 
 function App() {
