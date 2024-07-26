@@ -6,19 +6,26 @@ import Cat from "./components/Cat/Cat";
 import Dog from "./components/Dog/Dog";
 import Home from "./components/Home/Home";
 import reportWebVitals from "./reportWebVitals";
+import Layout from "./components/Layout/Layout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "cat",
-    element: <Cat />,
-  },
-  {
-    path: "dog",
-    element: <Dog />,
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "cat",
+        element: <Cat />,
+      },
+      {
+        path: "dog",
+        element: <Dog />,
+      },
+    ],
   },
 ]);
 
